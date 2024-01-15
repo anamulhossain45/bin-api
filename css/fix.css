@@ -1,0 +1,117 @@
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+@media screen and (min-width: 993px) {
+    .nav-wrapper {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (min-width: 993px) {
+    #toast-container {
+        top: auto !important;
+        left: 7%;
+        bottom: 2% !important;
+        max-width: 86%
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 992px) {
+    #toast-container {
+        min-width: 90%;
+    }
+}
+
+strong {
+    font-weight: bold !important;
+}
+
+.logo {
+    display: inline-block;
+    height: 60px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+}
+
+@media only screen and (max-width: 600px) {
+    .logo {
+        display: inline-block;
+        height: 56px;
+        padding-top: 4px;
+        padding-bottom: 4px;
+    }
+}
+
+.logo>img {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+
+.padding_fix {
+    padding-right: 8px !important;
+}
+
+.page-footer a {
+    color: #ffffff;
+}
+
+.spin {
+    animation-name: spin;
+    animation-duration: 1500ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.content {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.content:focus {
+    border-bottom: none !important;
+    box-shadow: none !important;
+}
+
+.options {
+    margin-bottom: 0 !important;
+}
+
+pre {
+    counter-reset: line;
+}
+
+code {
+    counter-increment: line;
+    word-wrap: break-word;
+}
+
+code::before {
+    content: counter(line);
+    display: inline-block;
+    width: 2.2em;
+    margin-right: 0.2em;
+    color: #41414159;
+}
+.no-padding {
+    padding: 0px !important;
+}
